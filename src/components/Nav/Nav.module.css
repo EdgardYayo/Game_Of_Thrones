@@ -2,7 +2,7 @@
     font-variant:small-caps;
     display: flex;
     justify-content: space-around;
-    background: linear-gradient(gray, black);
+    background: linear-gradient(white, black);
     width: 100%;
     padding: 20px;
 }
