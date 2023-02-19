@@ -1,0 +1,30 @@
+.nav {
+    font-variant:small-caps;
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(gray, black);
+    width: 100%;
+    padding: 20px;
+}
+
+.nav a{
+    background: black;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    padding: 10px;
+    border-radius: 10px;
+    border: 6px white double;
+    transition: all ease 500ms;
+    box-shadow: inset white 0 0 4px;
+}
+
+.nav a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px white;
+    border: 6px white outset;
+    text-shadow: 0 0 2px white;
+
+};

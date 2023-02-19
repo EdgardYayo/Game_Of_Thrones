@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: 2px black solid;
+    border-radius: 10px;
+    height: 400px;
+    opacity: 0.9;
+    transition: all 750ms ease;
+}
+
+.container:hover {
+    opacity: 1;
+    box-shadow: 0 0 10px black;
+    filter: contrast(120%) brightness(1.05);
+}
+
+.img {
+ position: relative;
+ width: 200px;
+ height: 200px;
+ border-radius: 50%;
+ border-left: black 2px solid;
+ border-bottom: black 5px solid;
+ transform: translateY(-10px) rotateX(-30deg) rotateY(-20deg) rotateZ(3deg);
+ transition: all 750ms ease;
+}
+
+.img:hover{
+    border: none;
+    transform: none;
+    filter: contrast(120%);
+    box-shadow: 0 0 20px black;
+
+}
+
+.name {
+ font-size: x-large;
+ font-variant: small-caps;
+ border: white double 5px;
+ padding: 5px;
+ text-shadow: white 0 0 3px;
+ box-shadow: inset 0 0 5px black;
+}
+
+.title, .family {
+    font-style: italic;
+    font-size: large;
+}
+
+.family {
+    font-weight: 500;
+}
+
+.bottom {
+    border-top: 10px rgb(95, 94, 94) solid;
+    width: 70px;
+    height: 0;
+    border-radius: 80%;
+    transition: all 450ms ease;
+}
+
+.img:hover ~ .bottom {
+    transition: all 250ms ease;
+    width: 0;
+}

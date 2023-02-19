@@ -54,3 +54,4 @@ export const deleteHouse = (id) => {
         payload: id
     }
 }
+

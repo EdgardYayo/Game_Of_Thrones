@@ -139,6 +139,14 @@
               "family": "House Targaryen",
               "imageUrl": "https://thronesapi.com/assets/images/daenerys.jpg",
               "houseId": 2
+            },
+            {
+              "id": "10a",
+              "fullName": "Viserys Targaryn",
+              "title": "King Viserys III",
+              "family": "House Targaryen",
+              "imageUrl": "https://thronesapi.com/assets/images/viserys-targaryan.jpg",
+              "houseId": 2
             }
           ]
         },
@@ -170,6 +178,14 @@
               "title": "Hand of the Queen",
               "family": "House Lanister",
               "imageUrl": "https://thronesapi.com/assets/images/tyrion-lannister.jpg",
+              "houseId": 3
+            },
+            {
+              "id": "14a",
+              "fullName": "Tywin Lannister",
+              "title": "Lord Paramount of Westerlands",
+              "family": "House Lanister",
+              "imageUrl": "https://thronesapi.com/assets/images/tywin-lannister.jpg",
               "houseId": 3
             }
           ]

@@ -1,0 +1,36 @@
+.container {
+    border-top: 10px double black;
+    background: radial-gradient(gray, white);
+    height:100vh;
+}
+
+
+.subcont {
+ text-align: center;
+ font-variant: small-caps;
+}
+
+.subcont h1 {
+    margin-top: 0;
+}
+
+.subcont h3 {
+    font-style: italic;
+}
+
+
+.character {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.arrows {
+    background: none;
+    border: none;
+    font-size: 30px;
+}
+
+.arrows:hover {
+    transform: scale(1.3);
+}

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getAllHouses } from '../../redux/actions';
 import HouseCard from '../HouseCard/HouseCard';
+import GOT from '../../img-cp2/main-image-cp2.jpg';
+import style from './Houses.module.css';
 
 // CUIDADOOOO. SI O SI CLASS COMPONENT! SE ROMPEN LOS TEST EN CASO CONTRARIO!!
 // TAMBIEN VAS A TENER QUE USAR EL METODO CONNECT DE REDUX, JUNTO A MAP_STATE_TO_PROPS 
@@ -9,25 +11,32 @@ import HouseCard from '../HouseCard/HouseCard';
 export class Houses extends Component {
     componentDidMount(){
         this.props.getAllHouses()
+        console.log(this.props);
     }
+
+
     render() {
         return (
-            <div>
-              <h1>Game of Thrones</h1>
-              <img src='main-image-cp2.jpg' alt='main-img'/>
-              <h3>Houses</h3>
+            <div className={style.container}>
+              <h1 className={style.title}>Game of Thrones</h1>
+              <div className={style.img}>
+              <img src={GOT} alt='main-img'/>
+              </div>
+              <h3 className={style.subtitle}>Houses</h3>
+              <div className={style.houseCard}>
               { this.props.houses?.map(house => {
-                return (
-                    <HouseCard 
-                    id={house.id}
-                    region={house.region}
-                    name={house.name}
-                    words={house.words}
-                    characters={house.characters}   
-                    key={house.id}
-                    />
-                )
-              })}
+                  return (
+                      <HouseCard 
+                      id={house.id}
+                      region={house.region}
+                      name={house.name}
+                      words={house.words} 
+                      characters={house.characters}   
+                      key={house.id}
+                      />
+                      )
+                    })}
+                    </div>
             </div>
         );
     };

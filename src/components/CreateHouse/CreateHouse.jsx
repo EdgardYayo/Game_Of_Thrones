@@ -1,6 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { createHouse } from "../../redux/actions";
+import style from './CreateHouse.module.css';
 
 // CUIDADOOOO. SI O SI FUNCTIONAL COMPONENT! SE ROMPEN LOS TEST EN CASO CONTRARIO!!
 // TAMBIEN VAS A TENER QUE USAR HOOKS!
@@ -13,6 +15,7 @@ const CreateHouse = () => {
     region:"",
     words:"",
   })
+  const history = useHistory()
 
   const inputHandler = (event) => {
     setInput({...input,[event.target.name]: event.target.value})
@@ -21,19 +24,25 @@ const CreateHouse = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     dispatch(createHouse(input));
+    setInput({
+      name:"",
+      region:"",
+      words:"",
+    })
+    history.push('/')
   }
 
   return (
-    <div>
-      <form onSubmit={submitHandler}>
+    <div className={style.container}>
+      <form className={style.form} onSubmit={submitHandler}>
         <label>Name: </label>
-        <input name="name" onChange={inputHandler}/>
+        <input name="name" value={input.name} onChange={inputHandler}/>
 
         <label>Region: </label>
-        <input name="region" onChange={inputHandler}/>
+        <input name="region" value={input.region} onChange={inputHandler}/>
 
         <label>Words: </label>
-        <input name="words" onChange={inputHandler}/>
+        <input name="words" value={input.words} onChange={inputHandler}/>
 
         <button type="submit">Create</button>
 

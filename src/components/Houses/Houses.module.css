@@ -1,0 +1,38 @@
+.container {
+    background: linear-gradient(black, white);
+    color: white;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    font-variant: small-caps;
+    text-shadow: 0 0 2px white;
+    padding-top: 20px;
+    margin-top: 0;
+}
+
+.img {
+    text-align: center;
+}
+
+.img img {
+    width: 100%;
+    border-bottom: double 10px black;
+    border-top: double 10px white;
+}
+
+.subtitle{
+    text-shadow: 0 0 3px black;
+    text-align: center;
+    font-size: 40px;
+    color: black;
+}
+
+.houseCard {
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    margin-bottom: 20px;
+}
+

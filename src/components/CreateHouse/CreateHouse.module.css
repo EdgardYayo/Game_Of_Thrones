@@ -1,0 +1,42 @@
+.container {
+    background: radial-gradient(white, gray);
+    height: 100vh;
+}
+
+.form {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.form label {
+    font-variant: small-caps;
+    font-style: italic;
+}
+
+.form input {
+    border-radius: 5px;
+    padding: 8px;
+    outline: none;
+}
+
+.form input:focus{
+    box-shadow: 0 0 10px black;
+}
+
+.form button {
+    font-size: 20px;
+    font-variant-caps: petite-caps;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 400px;
+    transition: all 500ms ease;
+}
+
+.form button:hover {
+    background: radial-gradient(white, black);
+    color: white;
+    text-shadow: black 0 0 5px;
+}
